@@ -1,0 +1,29 @@
+{
+  "actual_first_timestamp": "2021-01-01T00:00:00Z",
+  "actual_last_timestamp": "2025-12-31T23:00:00Z",
+  "api_url": "https://api.exchange.coinbase.com/products/BTC-USD/candles",
+  "chunk_hours": 250,
+  "download_timestamp_utc": "2026-09-22T15:44:34Z",
+  "duplicate_timestamp_count": 0,
+  "expected_hourly_buckets": 43824,
+  "granularity": "1 hour",
+  "granularity_seconds": 3600,
+  "missing_hour_count": 8,
+  "notes": [
+    "Raw OHLCV only; no indicators or forecasting features were created.",
+    "No missing hours were filled.",
+    "No prices were interpolated.",
+    "No suspicious observations were removed.",
+    "Coinbase candle rows are interpreted as [time, low, high, open, close, volume].",
+    "Missing hourly buckets are retained as missing because Coinbase documents that historical candles may be incomplete when there are no ticks."
+  ],
+  "product": "BTC-USD",
+  "raw_csv_path": "data\\raw\\btc_usd_hourly_raw.csv",
+  "raw_csv_sha256": "f79ed20eae17367b62c2c3bcd1fccd4d3471cdbb456523d959ad583b00f1c237",
+  "requested_end_exclusive": "2026-01-01T00:00:00Z",
+  "requested_start": "2021-01-01T00:00:00Z",
+  "restart_manifest_id": "418e65208e509ede",
+  "row_count": 43816,
+  "source": "Coinbase Exchange REST API",
+  "timezone": "UTC"
+}

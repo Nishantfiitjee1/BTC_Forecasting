@@ -1,0 +1,48 @@
+{
+  "method": "static_ar_on_hourly_log_returns",
+  "selected_model": {
+    "lag": 3,
+    "include_intercept": true,
+    "coefficients": [
+      -0.006587255086993749,
+      -0.015670938780031313,
+      0.00362343996296227
+    ],
+    "intercept": 1.420610050224954e-05,
+    "n_train": 26270,
+    "train_origin_first": "2021-01-01T03:00:00+00:00",
+    "train_origin_last": "2023-12-31T23:00:00+00:00",
+    "fit_slice_sha256": "b0ba23522accdd4b2e35fa938b7589938294170f77f8816d48dd052f1b7fa0e7",
+    "condition_number": 140.59359542134985,
+    "rank": 4
+  },
+  "test_period": "test",
+  "test_metrics": {
+    "n_predictions": 8750,
+    "mae_close": 306.47566703711556,
+    "rmse_close": 465.97379055911716,
+    "median_absolute_error_close": 203.09737197992217,
+    "mean_error_close": 2.2343696401587105,
+    "rmse_return": 0.0047781032174234,
+    "mae_return": 0.003081721946408846,
+    "mean_absolute_actual_return": 0.0030837449320749396,
+    "zero_actual_return_count": 0,
+    "directional_accuracy": 0.5140571428571429
+  },
+  "test_persistence": {
+    "n_predictions": 8753,
+    "mae_close": 306.5995155946532,
+    "rmse_close": 465.77852839647227,
+    "median_absolute_error_close": 203.49000000000524,
+    "mean_error_close": 0.7705792299782936,
+    "rmse_return": 0.004775897488683783,
+    "mae_return": 0.0030829349974136875,
+    "mean_absolute_actual_return": 0.0030829349974136875,
+    "zero_actual_return_count": 0,
+    "directional_accuracy": 0.0
+  },
+  "test_used_for_selection": false,
+  "test_refit_performed": false,
+  "ar_minus_persistence_rmse_return": 2.205728739617177e-06,
+  "ar_minus_persistence_mae_close": -0.12384855753765578
+}

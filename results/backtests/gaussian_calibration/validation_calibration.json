@@ -1,0 +1,161 @@
+{
+  "validation_period": {
+    "start": "2024-01-01T00:00:00+00:00",
+    "end_exclusive": "2025-01-01T00:00:00+00:00"
+  },
+  "input_files": {
+    "ar3": "D:\\python\\BTC_Forecasting\\results\\backtests\\ar_static\\AR(3)_intercept_true_validation_predictions.csv",
+    "normal_garch": "D:\\python\\BTC_Forecasting\\results\\backtests\\garch_static\\validation_variance_predictions.csv"
+  },
+  "population": {
+    "ar3_rows": 8784,
+    "normal_garch_rows": 8784,
+    "common_rows": 8784,
+    "ar3_only_rows": 0,
+    "normal_garch_only_rows": 0,
+    "first_timestamp": "2024-01-01T00:00:00+00:00",
+    "last_timestamp": "2024-12-31T23:00:00+00:00"
+  },
+  "integrity": {
+    "timestamps_unique_and_sorted": true,
+    "timestamps_utc": true,
+    "ar_garch_fields_agree": true,
+    "variance_positive_and_finite": true,
+    "volatility_positive_and_finite": true,
+    "volatility_equals_sqrt_variance": true,
+    "actuals_used_only_for_evaluation": true
+  },
+  "formulas": {
+    "standardized_residual": "(actual_return_1h - predicted_return_1h) / predicted_volatility_1h",
+    "interval": "predicted_return_1h +/- z * predicted_volatility_1h",
+    "directional_probability": "NormalCDF(predicted_return_1h / predicted_volatility_1h)",
+    "brier_score": "mean((probability - I(actual_return_1h > 0))^2)"
+  },
+  "standardized_residual": {
+    "mean": 0.010558147964540786,
+    "standard_deviation": 0.9591186791187161,
+    "quantiles": {
+      "0.01": -2.9326570219497734,
+      "0.05": -1.463311365974813,
+      "0.10": -0.9664748484562896,
+      "0.25": -0.4379863547355795,
+      "0.50": 0.01730823391918174,
+      "0.75": 0.4767014784619693,
+      "0.90": 0.9901277892837105,
+      "0.95": 1.4181113241212384,
+      "0.99": 2.8258617772968955
+    }
+  },
+  "gaussian_intervals": {
+    "50": {
+      "nominal_coverage": 0.5,
+      "critical_value": 0.6744897501960817,
+      "empirical_coverage": 0.6648451730418944,
+      "covered_count": 5840,
+      "average_return_interval_width": 0.007687853784643166,
+      "average_close_interval_width": 507.8484683433572
+    },
+    "80": {
+      "nominal_coverage": 0.8,
+      "critical_value": 1.2815515655446004,
+      "empirical_coverage": 0.8757969034608379,
+      "covered_count": 7693,
+      "average_return_interval_width": 0.014607162007314763,
+      "average_close_interval_width": 964.9373499670186
+    },
+    "90": {
+      "nominal_coverage": 0.9,
+      "critical_value": 1.6448536269514722,
+      "empirical_coverage": 0.9222449908925319,
+      "covered_count": 8101,
+      "average_return_interval_width": 0.018748089466840312,
+      "average_close_interval_width": 1238.4945038490328
+    },
+    "95": {
+      "nominal_coverage": 0.95,
+      "critical_value": 1.959963984540054,
+      "empirical_coverage": 0.9479735883424408,
+      "covered_count": 8327,
+      "average_return_interval_width": 0.02233972648499127,
+      "average_close_interval_width": 1475.7710033098874
+    }
+  },
+  "directional_probability": {
+    "event": "actual_return_1h > 0",
+    "brier_score": 0.24977644290457365,
+    "positive_return_count": 4503,
+    "positive_return_rate": 0.512636612021858,
+    "calibration_bins": [
+      {
+        "bin_lower": 0.0,
+        "bin_upper": 0.1,
+        "count": 0,
+        "mean_predicted_probability": null,
+        "empirical_positive_rate": null
+      },
+      {
+        "bin_lower": 0.1,
+        "bin_upper": 0.2,
+        "count": 0,
+        "mean_predicted_probability": null,
+        "empirical_positive_rate": null
+      },
+      {
+        "bin_lower": 0.2,
+        "bin_upper": 0.30000000000000004,
+        "count": 0,
+        "mean_predicted_probability": null,
+        "empirical_positive_rate": null
+      },
+      {
+        "bin_lower": 0.30000000000000004,
+        "bin_upper": 0.4,
+        "count": 0,
+        "mean_predicted_probability": null,
+        "empirical_positive_rate": null
+      },
+      {
+        "bin_lower": 0.4,
+        "bin_upper": 0.5,
+        "count": 3702,
+        "mean_predicted_probability": 0.4959366380019723,
+        "empirical_positive_rate": 0.48973527822798485
+      },
+      {
+        "bin_lower": 0.5,
+        "bin_upper": 0.6000000000000001,
+        "count": 5082,
+        "mean_predicted_probability": 0.5046797772395472,
+        "empirical_positive_rate": 0.529319165682802
+      },
+      {
+        "bin_lower": 0.6000000000000001,
+        "bin_upper": 0.7000000000000001,
+        "count": 0,
+        "mean_predicted_probability": null,
+        "empirical_positive_rate": null
+      },
+      {
+        "bin_lower": 0.7000000000000001,
+        "bin_upper": 0.8,
+        "count": 0,
+        "mean_predicted_probability": null,
+        "empirical_positive_rate": null
+      },
+      {
+        "bin_lower": 0.8,
+        "bin_upper": 0.9,
+        "count": 0,
+        "mean_predicted_probability": null,
+        "empirical_positive_rate": null
+      },
+      {
+        "bin_lower": 0.9,
+        "bin_upper": 1.0,
+        "count": 0,
+        "mean_predicted_probability": null,
+        "empirical_positive_rate": null
+      }
+    ]
+  }
+}

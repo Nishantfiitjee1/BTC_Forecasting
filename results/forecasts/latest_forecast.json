@@ -1,0 +1,109 @@
+{
+  "forecast_timestamp_utc": "2025-12-31T23:00:00+00:00",
+  "target_timestamp_utc": "2026-01-01T00:00:00+00:00",
+  "input_latest_timestamp_utc": "2025-12-31T23:00:00+00:00",
+  "forecast_origin_close": 87497.94,
+  "predicted_return_1h": 4.194763247276772e-05,
+  "predicted_close_1h": 87501.61040841119,
+  "predicted_variance_1h": 1.1272926839320668e-05,
+  "predicted_volatility_1h": 0.003357517958153116,
+  "production_refit_scope": {
+    "point_model": "all labeled origins strictly before forecast origin",
+    "volatility_model": "all valid hourly returns through forecast origin"
+  },
+  "point_model": {
+    "specification": "AR(3)_intercept_true",
+    "fit_rows": 43804,
+    "train_origin_first": "2021-01-01T03:00:00+00:00",
+    "train_origin_last": "2025-12-31T22:00:00+00:00",
+    "fit_slice_sha256": "fc85d8b929c5f08fe2ec06e80ee6956f42662dbd56b5669fee5bfe6f41a0e05b",
+    "coefficients": [
+      -0.008057459335522953,
+      -0.012458808673464206,
+      -0.00017993936430139943
+    ],
+    "intercept": 2.5337806221455822e-05
+  },
+  "volatility_model": {
+    "specification": "GARCH(1,1)_normal",
+    "fit_rows": 43813,
+    "train_origin_first": "2021-01-01T01:00:00+00:00",
+    "train_origin_last": "2025-12-31T23:00:00+00:00",
+    "fit_slice_sha256": "86c788c1b7be51aa64b6ec6dd45f89e3ed4ba0f6ba4b386660e8156aa85fa852",
+    "mu": 7.889801083736762e-06,
+    "omega": 7.867519600687259e-07,
+    "alpha": 0.12951722586628486,
+    "beta": 0.8662824048037248,
+    "alpha_plus_beta": 0.9957996306700097
+  },
+  "interval_calibration": {
+    "source": "D:\\python\\BTC_Forecasting\\results\\backtests\\gaussian_calibration\\validation_calibration_predictions.csv",
+    "selection_protocol": "2024 validation 70/30; 2025 test excluded",
+    "factors": {
+      "50": [
+        -0.43426164962340713,
+        0.46929968531861976
+      ],
+      "80": [
+        -0.9710009718150562,
+        0.9786290316485483
+      ],
+      "90": [
+        -1.4838919259652863,
+        1.4208503196283215
+      ],
+      "95": [
+        -1.9599639845400545,
+        1.959963984540054
+      ]
+    },
+    "intervals": {
+      "50": {
+        "method": "empirical",
+        "lower_return": -0.001416093654675018,
+        "upper_return": 0.00161762975368564,
+        "lower_close": 87374.12241171059,
+        "upper_close": 87639.59381195158,
+        "lower_factor": -0.43426164962340713,
+        "upper_factor": 0.46929968531861976
+      },
+      "80": {
+        "method": "empirical",
+        "lower_return": -0.003218205567780411,
+        "upper_return": 0.003327712180602763,
+        "lower_close": 87216.80625804773,
+        "upper_close": 87789.59296013064,
+        "lower_factor": -0.9710009718150562,
+        "upper_factor": 0.9786290316485483
+      },
+      "90": {
+        "method": "empirical",
+        "lower_return": -0.004940246156914095,
+        "upper_return": 0.004812478096472452,
+        "lower_close": 87066.74462081488,
+        "upper_close": 87920.03677082402,
+        "lower_factor": -1.4838919259652863,
+        "upper_factor": 1.4208503196283215
+      },
+      "95": {
+        "method": "gaussian",
+        "lower_return": -0.006538666642953802,
+        "upper_return": 0.006622561907899335,
+        "lower_close": 86927.68651882686,
+        "upper_close": 88079.32352377877,
+        "lower_factor": -1.9599639845400545,
+        "upper_factor": 1.959963984540054
+      }
+    }
+  },
+  "protocol": {
+    "target": "BTC/USD next 1 hour",
+    "point_forecast": "AR(3) with intercept",
+    "variance_forecast": "Normal GARCH(1,1)",
+    "model_selection_used_test_data": false,
+    "historical_test_period_reused_for_production_refit": true,
+    "automatic_model_selection": false,
+    "forecast_origin_is_last_observed_candle": true,
+    "latest_origin_target_used_for_fit": false
+  }
+}

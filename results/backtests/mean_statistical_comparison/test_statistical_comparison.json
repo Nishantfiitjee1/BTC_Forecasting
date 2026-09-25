@@ -1,0 +1,44 @@
+{
+  "test_period": [
+    "2025-01-01T00:00:00Z",
+    "2026-01-01T00:00:00Z"
+  ],
+  "n_predictions": 8750,
+  "model": "locked AR(3), intercept=True (loaded from results\\backtests\\ar_static\\selected_model.json, no refit)",
+  "coefficients": {
+    "intercept": 1.4206100502249522e-05,
+    "lag1": -0.006587255086993753,
+    "lag2": -0.01567093878003132,
+    "lag3": 0.003623439962962263
+  },
+  "fit_slice_sha256": "2d516abdf215c5262ff5eda1c7b89ece45898488689be9879146f7b1e30f5b3f",
+  "return_squared_error": {
+    "ar": 2.2830270356351845e-05,
+    "persistence": 2.2816787272992816e-05,
+    "loss_difference_persistence_minus_ar": -1.3483083359024393e-08,
+    "dm_stat": -1.188952175808793,
+    "p_value": 0.23445848670562852,
+    "moving_block_bootstrap_95ci": [
+      -3.55568107044341e-08,
+      8.93528972312173e-09
+    ],
+    "interpretation_of_positive_difference": "AR has lower squared-return loss"
+  },
+  "close_absolute_error": {
+    "ar": 306.47566703711556,
+    "persistence": 306.6770571428571,
+    "loss_difference_persistence_minus_ar": 0.20139010574149266,
+    "dm_stat": 2.4343486531437284,
+    "p_value": 0.014918617309059986,
+    "moving_block_bootstrap_95ci": [
+      0.048159597577929716,
+      0.3689217428731916
+    ],
+    "interpretation_of_positive_difference": "AR has lower absolute close error"
+  },
+  "integrity": {
+    "test_used_for_selection": false,
+    "test_refit_performed": false,
+    "ar_persistence_timestamps_identical": true
+  }
+}

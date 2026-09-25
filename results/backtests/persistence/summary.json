@@ -1,0 +1,49 @@
+{
+  "method": "persistence",
+  "forecast_definition": "predicted_close_(t+1) = close_t; predicted_return_(t+1) = 0",
+  "input_file": "data\\processed\\btc_usd_hourly_model.csv",
+  "periods": {
+    "development": {
+      "n_predictions": 26276,
+      "mae_close": 161.61488963312536,
+      "rmse_close": 275.97454800685364,
+      "median_absolute_error_close": 83.8949999999968,
+      "mean_error_close": -0.5136299284518194,
+      "mean_absolute_actual_return": 0.004406865426196701,
+      "rmse_return": 0.007184456141263362,
+      "directional_accuracy": null,
+      "directional_accuracy_status": "not_applicable_zero_return_forecast",
+      "zero_actual_return_count": 1,
+      "forecast_origin_first": "2021-01-01T00:00:00+00:00",
+      "forecast_origin_last": "2023-12-31T23:00:00+00:00"
+    },
+    "validation": {
+      "n_predictions": 8784,
+      "mae_close": 246.42994763205826,
+      "rmse_close": 382.0637901544112,
+      "median_absolute_error_close": 156.82999999999447,
+      "mean_error_close": -5.8921174863387975,
+      "mean_absolute_actual_return": 0.0037195900376851792,
+      "rmse_return": 0.005660214427000575,
+      "directional_accuracy": null,
+      "directional_accuracy_status": "not_applicable_zero_return_forecast",
+      "zero_actual_return_count": 1,
+      "forecast_origin_first": "2024-01-01T00:00:00+00:00",
+      "forecast_origin_last": "2024-12-31T23:00:00+00:00"
+    },
+    "test": {
+      "n_predictions": 8753,
+      "mae_close": 306.59951559465327,
+      "rmse_close": 465.77852839647227,
+      "median_absolute_error_close": 203.49000000000524,
+      "mean_error_close": 0.7705792299782936,
+      "mean_absolute_actual_return": 0.0030829349974136875,
+      "rmse_return": 0.004775897488683784,
+      "directional_accuracy": null,
+      "directional_accuracy_status": "not_applicable_zero_return_forecast",
+      "zero_actual_return_count": 0,
+      "forecast_origin_first": "2025-01-01T00:00:00+00:00",
+      "forecast_origin_last": "2025-12-31T22:00:00+00:00"
+    }
+  }
+}

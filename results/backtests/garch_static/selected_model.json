@@ -1,0 +1,43 @@
+{
+  "lock_version": 1,
+  "status": "LOCKED_FOR_TEST",
+  "model_family": "GARCH(1,1)_normal",
+  "development_period": "development",
+  "validation_period": "validation",
+  "test_period": "test",
+  "selected_model": {
+    "mu": -7.941127982549611e-06,
+    "omega": 6.022813522727053e-07,
+    "alpha": 0.09014430787774902,
+    "beta": 0.9061067566479344,
+    "unconditional_variance": 0.00016065396601218002,
+    "n_train": 26275,
+    "train_origin_first": "2021-01-01T01:00:00+00:00",
+    "train_origin_last": "2023-12-31T23:00:00+00:00",
+    "fit_slice_sha256": "faa7d2a7c892ca363fc6fef21fe912b8bf649a428411e058657b392e3e622536",
+    "loglikelihood": -23653.466626200134,
+    "converged": true,
+    "optimizer_iterations": 21
+  },
+  "development_fit": {
+    "n_train": 26275,
+    "mu": -7.941127982549611e-06,
+    "omega": 6.022813522727053e-07,
+    "alpha": 0.09014430787774902,
+    "beta": 0.9061067566479344,
+    "alpha_plus_beta": 0.9962510645256835,
+    "unconditional_volatility": 0.012674934556524544,
+    "mean_abs_standardized_residual": 0.6596692758400058,
+    "loglikelihood_scaled_returns": -23653.466626200134,
+    "converged": true,
+    "optimizer_iterations": 21
+  },
+  "validation_metrics": {
+    "n_predictions": 8784,
+    "qlike": 1.906258327343694,
+    "mse_squared_return": 9.259181680298112e-09
+  },
+  "test_used_for_selection": false,
+  "test_refit_performed": false,
+  "selection_rule": "single GARCH(1,1) specification; validation used only for documented pre-test evaluation"
+}

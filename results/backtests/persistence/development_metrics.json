@@ -1,0 +1,14 @@
+{
+  "n_predictions": 26276,
+  "mae_close": 161.61488963312536,
+  "rmse_close": 275.97454800685364,
+  "median_absolute_error_close": 83.8949999999968,
+  "mean_error_close": -0.5136299284518194,
+  "mean_absolute_actual_return": 0.004406865426196701,
+  "rmse_return": 0.007184456141263362,
+  "directional_accuracy": null,
+  "directional_accuracy_status": "not_applicable_zero_return_forecast",
+  "zero_actual_return_count": 1,
+  "forecast_origin_first": "2021-01-01T00:00:00+00:00",
+  "forecast_origin_last": "2023-12-31T23:00:00+00:00"
+}

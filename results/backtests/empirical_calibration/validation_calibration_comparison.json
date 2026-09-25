@@ -1,0 +1,137 @@
+{
+  "protocol": {
+    "input": "D:\\python\\BTC_Forecasting\\results\\backtests\\gaussian_calibration\\validation_calibration_predictions.csv",
+    "validation_period_start": "2024-01-01 00:00:00+00:00",
+    "validation_period_end_exclusive": "2025-01-01 00:00:00+00:00",
+    "calibration_fraction": 0.7,
+    "calibration_n": 6148,
+    "evaluation_n": 2636,
+    "calibration_start": "2024-01-01 00:00:00+00:00",
+    "calibration_end": "2024-09-13 03:00:00+00:00",
+    "evaluation_start": "2024-09-13 04:00:00+00:00",
+    "evaluation_end": "2024-12-31 23:00:00+00:00",
+    "test_period_accessed": false,
+    "ar_or_garch_refit": false
+  },
+  "empirical_standardized_residual_quantiles": {
+    "50": {
+      "lower": -0.43426164962340713,
+      "upper": 0.46929968531861976
+    },
+    "80": {
+      "lower": -0.9710009718150562,
+      "upper": 0.9786290316485483
+    },
+    "90": {
+      "lower": -1.4838919259652863,
+      "upper": 1.4208503196283215
+    },
+    "95": {
+      "lower": -2.0732077177912873,
+      "upper": 1.9760261207112204
+    }
+  },
+  "comparison": {
+    "50": {
+      "nominal_coverage": 0.5,
+      "empirical": {
+        "confidence": 0.5,
+        "nominal_coverage": 0.5,
+        "actual_coverage": 0.48292867981790594,
+        "covered_count": 1273,
+        "n": 2636,
+        "coverage_error": -0.017071320182094063,
+        "mean_interval_score": 0.011851595243948325,
+        "mean_return_width": 0.004938449049429495
+      },
+      "gaussian": {
+        "confidence": 0.5,
+        "nominal_coverage": 0.5,
+        "actual_coverage": 0.6555386949924128,
+        "covered_count": 1728,
+        "n": 2636,
+        "coverage_error": 0.1555386949924128,
+        "mean_interval_score": 0.012229782167567867,
+        "mean_return_width": 0.007372899075898356
+      },
+      "empirical_minus_gaussian_interval_score": -0.0003781869236195428,
+      "empirical_minus_gaussian_abs_coverage_error": -0.13846737481031873
+    },
+    "80": {
+      "nominal_coverage": 0.8,
+      "empirical": {
+        "confidence": 0.8,
+        "nominal_coverage": 0.8,
+        "actual_coverage": 0.7966616084977238,
+        "covered_count": 2100,
+        "n": 2636,
+        "coverage_error": -0.0033383915022762167,
+        "mean_interval_score": 0.018431268465999177,
+        "mean_return_width": 0.0106557773833492
+      },
+      "gaussian": {
+        "confidence": 0.8,
+        "nominal_coverage": 0.8,
+        "actual_coverage": 0.8789833080424886,
+        "covered_count": 2317,
+        "n": 2636,
+        "coverage_error": 0.07898330804248854,
+        "mean_interval_score": 0.01914324212747772,
+        "mean_return_width": 0.014008738235937639
+      },
+      "empirical_minus_gaussian_interval_score": -0.0007119736614785432,
+      "empirical_minus_gaussian_abs_coverage_error": -0.07564491654021233
+    },
+    "90": {
+      "nominal_coverage": 0.9,
+      "empirical": {
+        "confidence": 0.9,
+        "nominal_coverage": 0.9,
+        "actual_coverage": 0.9047799696509864,
+        "covered_count": 2385,
+        "n": 2636,
+        "coverage_error": 0.004779969650986371,
+        "mean_interval_score": 0.024194351206892093,
+        "mean_return_width": 0.015875979888526136
+      },
+      "gaussian": {
+        "confidence": 0.9,
+        "nominal_coverage": 0.9,
+        "actual_coverage": 0.9260242792109257,
+        "covered_count": 2441,
+        "n": 2636,
+        "coverage_error": 0.02602427921092565,
+        "mean_interval_score": 0.024564580788558138,
+        "mean_return_width": 0.017980020871500295
+      },
+      "empirical_minus_gaussian_interval_score": -0.0003702295816660449,
+      "empirical_minus_gaussian_abs_coverage_error": -0.02124430955993928
+    },
+    "95": {
+      "nominal_coverage": 0.95,
+      "empirical": {
+        "confidence": 0.95,
+        "nominal_coverage": 0.95,
+        "actual_coverage": 0.9559939301972686,
+        "covered_count": 2520,
+        "n": 2636,
+        "coverage_error": 0.005993930197268682,
+        "mean_interval_score": 0.030602672142958063,
+        "mean_return_width": 0.022131242481677763
+      },
+      "gaussian": {
+        "confidence": 0.95,
+        "nominal_coverage": 0.95,
+        "actual_coverage": 0.9522003034901366,
+        "covered_count": 2510,
+        "n": 2636,
+        "coverage_error": 0.002200303490136668,
+        "mean_interval_score": 0.03053965255170382,
+        "mean_return_width": 0.021424516304671
+      },
+      "empirical_minus_gaussian_interval_score": 6.301959125424444e-05,
+      "empirical_minus_gaussian_abs_coverage_error": 0.003793626707132014
+    }
+  },
+  "selection_rule": "Empirical calibration is retained only if it improves mean interval score on the chronological validation holdout at the target confidence levels without materially worsening coverage. The 2025 test period is never used for this decision."
+}

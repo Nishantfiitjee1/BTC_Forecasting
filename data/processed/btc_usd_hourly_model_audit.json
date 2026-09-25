@@ -1,0 +1,51 @@
+{
+  "data_quality": {
+    "actual_rows": 43816,
+    "duplicate_timestamp_count": 0,
+    "expected_hourly_buckets_between_first_last": 43824,
+    "missing_hour_count_between_first_last": 8,
+    "missing_hour_timestamps_utc": [
+      "2023-03-04T18:00:00+00:00",
+      "2023-03-04T19:00:00+00:00",
+      "2023-03-04T20:00:00+00:00",
+      "2025-10-25T16:00:00+00:00",
+      "2025-10-25T17:00:00+00:00",
+      "2025-10-25T18:00:00+00:00",
+      "2025-10-25T19:00:00+00:00",
+      "2025-10-25T20:00:00+00:00"
+    ],
+    "nan_count": 0,
+    "negative_volume_count": 0,
+    "non_positive_price_count": 0
+  },
+  "feature_policy": {
+    "forecasting_features_created": false,
+    "future_information_used": false
+  },
+  "input": {
+    "first_timestamp_utc": "2021-01-01T00:00:00+00:00",
+    "last_timestamp_utc": "2025-12-31T23:00:00+00:00",
+    "path": "data\\raw\\btc_usd_hourly_raw.csv",
+    "row_count": 43816,
+    "sha256": "f79ed20eae17367b62c2c3bcd1fccd4d3471cdbb456523d959ad583b00f1c237"
+  },
+  "output": {
+    "path": "data\\processed\\btc_usd_hourly_model.csv",
+    "row_count": 43816,
+    "sha256": "59267d0808f12520218fe8e11b081e362a99e85a57cd10fc3a1cace83c354afa"
+  },
+  "schema_version": "1.0",
+  "target_definition": {
+    "dataset_end_policy": "The final observation has no future target and is marked dataset_end.",
+    "eligibility_rule": "The next observed timestamp must equal timestamp[t] + 1 hour.",
+    "gap_policy": "Missing hourly buckets are not filled or interpolated; rows immediately preceding a gap have unavailable targets.",
+    "horizon": "1 hour",
+    "target_price": "next hourly candle close",
+    "target_return": "log(close[t+1] / close[t])"
+  },
+  "target_quality": {
+    "dataset_end_rows": 1,
+    "missing_next_hour_rows": 2,
+    "valid_target_rows": 43813
+  }
+}

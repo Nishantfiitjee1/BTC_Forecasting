@@ -1,0 +1,49 @@
+{
+  "test_period": {
+    "start": "2025-01-01T00:00:00+00:00",
+    "end_exclusive": "2026-01-01T00:00:00+00:00"
+  },
+  "population": {
+    "garch_rows": 8752,
+    "rolling_rows": 8729,
+    "common_rows": 8729,
+    "garch_only_rows": 23,
+    "rolling_only_rows": 0,
+    "first_common_timestamp": "2025-01-01T00:00:00+00:00",
+    "last_common_timestamp": "2025-12-31T22:00:00+00:00"
+  },
+  "method": {
+    "comparison": "paired common timestamps only",
+    "dm_bandwidth_hours": 24,
+    "bootstrap": "moving_block",
+    "bootstrap_block_length_hours": 24,
+    "bootstrap_resamples": 2000,
+    "bootstrap_seed": 20260924
+  },
+  "qlike": {
+    "garch": -9.911456856385717,
+    "rolling": -9.776564303656142,
+    "garch_minus_rolling": -0.1348925527295748,
+    "rolling_minus_garch_loss_difference": 0.1348925527295748,
+    "dm_statistic": 4.472568533857226,
+    "p_value": 7.728561884090668e-06,
+    "moving_block_bootstrap_95ci": [
+      0.07712406231962891,
+      0.197781336521258
+    ],
+    "positive_loss_difference_means": "GARCH has lower QLIKE"
+  },
+  "squared_return_mse": {
+    "garch": 7.223339745788524e-09,
+    "rolling": 7.2680857509380974e-09,
+    "garch_minus_rolling": -4.4746005149573036e-11,
+    "rolling_minus_garch_loss_difference": 4.474600514957463e-11,
+    "dm_statistic": 0.8211308410702717,
+    "p_value": 0.41157174446920664,
+    "moving_block_bootstrap_95ci": [
+      -6.775078894105039e-11,
+      1.555620589860774e-10
+    ],
+    "positive_loss_difference_means": "GARCH has lower squared-return MSE"
+  }
+}

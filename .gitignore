@@ -1,0 +1,10 @@
+﻿__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+dist/
+*.log
+
+# Temporary raw-data download chunks
+data/raw/.btc_usd_hourly_chunks/

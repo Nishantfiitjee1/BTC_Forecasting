@@ -1,0 +1,11 @@
+{
+  "model_family": "GARCH(1,1)_normal",
+  "test_period": "test",
+  "test_metrics": {
+    "n_predictions": 8752,
+    "qlike": 1.8379134013143006,
+    "mse_squared_return": 7.21834246493376e-09
+  },
+  "test_used_for_selection": false,
+  "test_refit_performed": false
+}

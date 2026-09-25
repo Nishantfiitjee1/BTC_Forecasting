@@ -1,0 +1,9 @@
+{
+  "model": "rolling_variance_24h",
+  "locked_window": 24,
+  "test": {
+    "n": 8729,
+    "qlike": 1.9694990903058942,
+    "mse_squared_return": 7.268085750938267e-09
+  }
+}

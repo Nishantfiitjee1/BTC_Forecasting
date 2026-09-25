@@ -1,0 +1,35 @@
+{
+  "selection_rule": "minimum validation QLIKE",
+  "candidate_windows_hours": [
+    24,
+    168,
+    720
+  ],
+  "locked_window": 24,
+  "validation": {
+    "n": 8784,
+    "qlike": 2.044058213331426,
+    "mse_squared_return": 9.570242891726904e-09,
+    "window": 24
+  },
+  "all_candidates": [
+    {
+      "n": 8784,
+      "qlike": 2.044058213331426,
+      "mse_squared_return": 9.570242891726904e-09,
+      "window": 24
+    },
+    {
+      "n": 8784,
+      "qlike": 2.0448916364887033,
+      "mse_squared_return": 9.674097701044277e-09,
+      "window": 168
+    },
+    {
+      "n": 8784,
+      "qlike": 2.0845402891532023,
+      "mse_squared_return": 9.737600339005868e-09,
+      "window": 720
+    }
+  ]
+}
