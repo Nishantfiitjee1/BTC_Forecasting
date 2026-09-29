@@ -1,0 +1,56 @@
+{
+  "data_quality": {
+    "actual_rows": 50329,
+    "duplicate_timestamp_count": 0,
+    "expected_hourly_buckets_between_first_last": 50342,
+    "missing_hour_count_between_first_last": 13,
+    "missing_hour_timestamps_utc": [
+      "2023-03-04T18:00:00+00:00",
+      "2023-03-04T19:00:00+00:00",
+      "2023-03-04T20:00:00+00:00",
+      "2025-10-25T16:00:00+00:00",
+      "2025-10-25T17:00:00+00:00",
+      "2025-10-25T18:00:00+00:00",
+      "2025-10-25T19:00:00+00:00",
+      "2025-10-25T20:00:00+00:00",
+      "2026-05-08T02:00:00+00:00",
+      "2026-05-08T03:00:00+00:00",
+      "2026-05-08T04:00:00+00:00",
+      "2026-05-08T05:00:00+00:00",
+      "2026-05-08T06:00:00+00:00"
+    ],
+    "nan_count": 0,
+    "negative_volume_count": 0,
+    "non_positive_price_count": 0
+  },
+  "feature_policy": {
+    "forecasting_features_created": false,
+    "future_information_used": false
+  },
+  "input": {
+    "first_timestamp_utc": "2021-01-01T00:00:00+00:00",
+    "last_timestamp_utc": "2026-09-29T13:00:00+00:00",
+    "path": "data\\raw\\btc_usd_hourly_extended.csv",
+    "row_count": 50329,
+    "sha256": "4fa502800cee71a2474c54a6501940d1eeebc26899e2c97c1f60ff2d34afdce7"
+  },
+  "output": {
+    "path": "data\\processed\\btc_usd_hourly_extended_model.csv",
+    "row_count": 50329,
+    "sha256": "6e0b568610af11d006b3ecf4c570e0e0765ead470871164e1d9c1255cfb3b996"
+  },
+  "schema_version": "1.0",
+  "target_definition": {
+    "dataset_end_policy": "The final observation has no future target and is marked dataset_end.",
+    "eligibility_rule": "The next observed timestamp must equal timestamp[t] + 1 hour.",
+    "gap_policy": "Missing hourly buckets are not filled or interpolated; rows immediately preceding a gap have unavailable targets.",
+    "horizon": "1 hour",
+    "target_price": "next hourly candle close",
+    "target_return": "log(close[t+1] / close[t])"
+  },
+  "target_quality": {
+    "dataset_end_rows": 1,
+    "missing_next_hour_rows": 3,
+    "valid_target_rows": 50325
+  }
+}

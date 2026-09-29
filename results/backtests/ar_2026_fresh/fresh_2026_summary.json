@@ -1,0 +1,29 @@
+{
+  "evaluation": "fresh_2026_out_of_sample",
+  "model": "locked_static_AR(3)_with_intercept",
+  "coefficients_lag1_to_lag3": [
+    -0.006587255086993749,
+    -0.015670938780031313,
+    0.00362343996296227
+  ],
+  "intercept": 1.420610050224954e-05,
+  "refit_performed": false,
+  "model_selection_performed": false,
+  "ar_metrics": {
+    "n_predictions": 6398,
+    "rmse_return": 0.004661854914698353,
+    "mae_return": 0.0030223765553586894,
+    "mae_close": 217.880866453897,
+    "rmse_close": 334.2020244869456
+  },
+  "persistence_metrics": {
+    "n_predictions": 6398,
+    "rmse_return": 0.004662665051990919,
+    "mae_return": 0.0030258137810328443,
+    "mae_close": 218.13006564551424,
+    "rmse_close": 334.2482723128706
+  },
+  "ar_minus_persistence_rmse_return": -8.101372925665984e-07,
+  "ar_minus_persistence_mae_close": -0.2491991916172367,
+  "predictions_csv": "results\\backtests\\ar_2026_fresh\\fresh_2026_predictions.csv"
+}
