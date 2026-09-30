@@ -105,5 +105,65 @@
     "automatic_model_selection": false,
     "forecast_origin_is_last_observed_candle": true,
     "latest_origin_target_used_for_fit": false
+  },
+  "glimpse_output": {
+    "format": "expected_price_plus_probability_by_price_range",
+    "current_price": 84193.56,
+    "expected_price_1h": 84196.41416734224,
+    "target_timestamp_utc": "2026-09-29T14:00:00+00:00",
+    "range_width_usd": 200.0,
+    "distribution": "Normal log-return predictive distribution using AR(3) mean and GARCH(1,1) volatility",
+    "probability_sum": 1.0,
+    "ranges": [
+      {
+        "range": "<$83,600",
+        "low": null,
+        "high": 83600.0,
+        "probability": 0.029939472282697832,
+        "probability_pct": 2.993947228269783
+      },
+      {
+        "range": "$83,600-$83,800",
+        "low": 83600.0,
+        "high": 83800.0,
+        "probability": 0.07585777981944608,
+        "probability_pct": 7.585777981944608
+      },
+      {
+        "range": "$83,800-$84,000",
+        "low": 83800.0,
+        "high": 84000.0,
+        "probability": 0.16242129290403884,
+        "probability_pct": 16.242129290403884
+      },
+      {
+        "range": "$84,000-$84,200",
+        "low": 84000.0,
+        "high": 84200.0,
+        "probability": 0.23627860749685642,
+        "probability_pct": 23.62786074968564
+      },
+      {
+        "range": "$84,200-$84,400",
+        "low": 84200.0,
+        "high": 84400.0,
+        "probability": 0.23417664770777713,
+        "probability_pct": 23.417664770777712
+      },
+      {
+        "range": "$84,400-$84,600",
+        "low": 84400.0,
+        "high": 84600.0,
+        "probability": 0.15852759019512763,
+        "probability_pct": 15.852759019512764
+      },
+      {
+        "range": ">=$84,600",
+        "low": 84600.0,
+        "high": null,
+        "probability": 0.10279860959405607,
+        "probability_pct": 10.279860959405607
+      }
+    ]
   }
 }
